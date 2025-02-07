@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation en Management des Systèmes d'Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Style pour l'en-tête */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        /* Style pour la barre de navigation */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            display: none; /* La barre de navigation est masquée par défaut */
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        /* Style pour le footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Style du formulaire de connexion */
+        .login-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 100px auto;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #45a049;
+        }
+        /* Style du contenu */
+        .content {
+            display: none;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .content h2 {
+            text-align: center;
+        }
+        .content a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+        }
+        .content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- En-tête -->
+<header>
+    <h1>Formation en Management des Systèmes d'Information</h1>
+</header>
+
+<!-- Barre de navigation -->
+<nav id="navbar">
+    <a href="#">Accueil</a>
+    <a href="#">À propos</a>
+    <a href="#">Contact</a>
+</nav>
+
+<!-- Formulaire de connexion -->
+<div id="login" class="login-form">
+    <h2>Authentification</h2>
+    <input type="text" id="username" placeholder="Identifiant" required>
+    <input type="password" id="password" placeholder="Mot de passe" required>
+    <button onclick="authenticate()">Se connecter</button>
+</div>
+
+<!-- Contenu après connexion -->
+<div id="content" class="content">
+    <h2>Bienvenue dans votre formation</h2>
+    <p>Choisissez une des sections suivantes :</p>
+    <a href="#">Management des Systèmes d'Information</a>
+    <a href="#">Outils d’analyse de données</a>
+    <a href="#">Cas d’entreprises</a>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Formation en Management des Systèmes d'Information</p>
+</footer>
+
+<script>
+    function authenticate() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Vérification basique des identifiants
+        // Remplacez cela par une authentification réelle si nécessaire
+        if (username === "etudiant" && password === "motdepasse") {
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+            document.getElementById('navbar').style.display = 'block'; // Afficher la barre de navigation
+        } else {
+            alert("Identifiant ou mot de passe incorrect.");
+        }
+    }
+</script>
+
+</body>
+</html>
